@@ -17,7 +17,7 @@ kubectl get service
 kubectl apply -f guestbook/redis-slave-deployment.yaml
   kubectl get pods
 
-  kubectl apply -f guestbook/redis-slave-service.yaml
+kubectl apply -f guestbook/redis-slave-service.yaml
 kubectl get services
 ```
 
@@ -27,25 +27,25 @@ kubectl apply -f guestbook/frontend-deployment.yaml
 kubectl get pods -l app=guestbook -l tier=frontend
 
 kubectl apply -f guestbook/frontend-service.yaml
-  kubectl get services
+kubectl get services
 ```
 
 
 # View the service
 ```sh
-  minikube service frontend --url
+kubectl service frontend --url
 ```
 
 # see load balancer
 ```
-  kubectl get service frontend
+kubectl get service frontend
 
 ```
 #scale up
 ```sh
-  kubectl scale deployment frontend --replicas=5
+kubectl scale deployment frontend --replicas=5
 
-    kubectl get pods
+kubectl get pods
 ```
 
 
@@ -53,9 +53,9 @@ kubectl apply -f guestbook/frontend-service.yaml
 
 ```bash
 kubectl delete deployment -l app=redis
-  kubectl delete service -l app=redis
-  kubectl delete deployment -l app=guestbook
-  kubectl delete service -l app=guestbook
+kubectl delete service -l app=redis
+kubectl delete deployment -l app=guestbook
+kubectl delete service -l app=guestbook
 ```
 
 

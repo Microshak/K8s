@@ -1,0 +1,7 @@
+
+# C extensions
+*.so
+
+# Config
+*.ini
+*.pem
